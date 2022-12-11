@@ -1,23 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { AppBar } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { Typography } from '@mui/material';
+import Customerlist from './components/Customerlist';
+import TabApp from './components/TabApp';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6">
+            PersonalTrainer
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <TabApp />
     </div>
   );
 }
